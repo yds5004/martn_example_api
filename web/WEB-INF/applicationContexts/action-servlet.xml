@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="HomeController" class="net.ncue.home.control.HomeController">
+        <property name="methodNameResolver" ref="methodNameResolver" />
+    </bean>
+
+    <!-- Mart Controller -->
+    <bean id="MartController" class="net.ncue.mart.control.MartController">
+        <property name="methodNameResolver" ref="methodNameResolver" />
+    </bean>    
+
+    <!-- FileUpload -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="5000000" />
+		<property name="maxInMemorySize" value="5000000" />
+	</bean>    
+    
+    
+    <!-- static view controller -->
+    <bean id="staticViewController" class="net.ncue.spring.StaticFileViewController" />
+
+	<bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="configLocation">
+			<value>/WEB-INF/conf/velocity.properties</value>
+		</property>
+		<property name="resourceLoaderPath">
+			<value>/</value>
+		</property>
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">UTF-8</prop>
+				<prop key="output.encoding">UTF-8</prop>
+            </props>
+        </property>
+	</bean>
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+		<property name="exposeRequestAttributes" value="true" />
+		<property name="exposeSessionAttributes" value="true" />
+		<property name="exposeSpringMacroHelpers" value="true" />
+		<property name="requestContextAttribute" value="rc" />
+		<property name="cache" value="true" />
+		<property name="prefix" value="/WEB-INF/vm/" />
+		<property name="suffix" value=".vm" />
+		<property name="contentType" value="text/html; charset=UTF-8"/>
+		<property name="toolboxConfigLocation">
+            <value>/WEB-INF/conf/toolbox.xml</value>
+		</property>
+	</bean>
+
+	<bean id="indexController" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>/index</value>
+		</property>
+	</bean>
+	
+	<bean id="methodNameResolver" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+		<property name="paramName">
+            <value>cmd</value>
+		</property>
+		<property name="defaultMethodName">
+            <value>info</value>
+		</property>
+	</bean>
+  
+	<!-- mapping url and controller -->
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<!-- Home Controller -->
+				<prop key="/home.ncue">HomeController</prop>
+
+				<!-- Mart Controller -->
+				<prop key="/mart.ncue">MartController</prop>
+
+
+			</props>
+		</property>
+	</bean>
+</beans>

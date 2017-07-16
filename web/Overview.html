@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<HTML>
+    <HEAD>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <TITLE> NCue Search APIs </TITLE>
+        <link href="http://ncue.net/css/docs.20100130.css" type="text/css" rel="stylesheet">        
+    </HEAD>
+    <BODY>
+        <div id="title">
+            <H1>Blog Search API</H1>
+			<H2>Parameter</H2>
+			<dl>
+			    <dt>qry</dt><dd>User query</dd>
+			    <dt>si</dt><dd>The ID of the first document which is printed in a page</dd>
+			    <dt>li</dt><dd>The ID of the last document which is printed in a page</dd>
+			    <dt>n</dt><dd>The document count which is printed in a page</dd>
+			</dl>
+			<H2>Example</H2>
+	        <pre>
+	            http://tyche.asia/search.map?cmd=search&qry=티스토리&si=0&li=9&n=10				
+			</pre>
+        </div>
+		
+        <div id="title">
+            <H1>Weekly Tag Set</H1>
+            <H2>Parameter</H2>
+            <dl>
+                <dt>nweek</dt><dd>Weeks to get tags</dd>
+                <dt>size</dt><dd>Tag Count</dd>
+            </dl>
+            <H2>Example</H2>
+            <pre>
+            	http://tyche.asia/search.map?cmd=search&nweek=1&size=10             
+            </pre>
+        </div>
+    </BODY>
+</HTML>

@@ -1,0 +1,7 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>NCue</title>
+<meta http-equiv="Refresh" Content="1;url=/home.ncue">
+</head>
+</HTML>

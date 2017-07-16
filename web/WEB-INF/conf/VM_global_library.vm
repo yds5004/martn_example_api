@@ -1,0 +1,12 @@
+#macro($sr)
+	#set ($head = $sr.get(0))
+	#set ($total = $head.get('total'))
+	#set ($pageCnt = $total / 10)
+	#set ($curPage = ($head.get('si') / $head.get('n')) + 1)
+	
+	$curPage
+  
+
+
+
+#end ##END Macro

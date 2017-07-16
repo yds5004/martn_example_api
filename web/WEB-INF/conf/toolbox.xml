@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<toolbox>
+<data type="number">
+<key>version</key>
+<value>1.0</value>
+</data>
+  <tool>
+    <key>date</key>
+    <scope>application</scope>
+    <class>org.apache.velocity.tools.generic.DateTool</class>
+  </tool>
+  
+  <tool>
+    <key>openutil</key>
+    <scope>application</scope>
+    <class>net.ncue.util.OpenUtil</class>
+  </tool>
+  
+  <tool>
+    <key>datetime</key>
+    <scope>application</scope>
+    <class>net.ncue.util.DateTime</class>
+  </tool>
+  
+  <tool>
+    <key>dateformat</key>
+    <scope>application</scope>
+    <class>net.ncue.util.DateFormat</class>
+  </tool>
+
+</toolbox>

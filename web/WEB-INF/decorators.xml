@@ -1,0 +1,10 @@
+<decorators defaultdir="/WEB-INF/decorator">
+	<excludes>
+		<pattern>/simple/*</pattern>
+	</excludes>
+
+	<decorator name="trans" page="search.jsp">
+		<pattern>/search.map</pattern>-->
+		<!--<pattern>/search/home.*</pattern>-->
+	</decorator>
+</decorators>

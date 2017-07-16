@@ -1,0 +1,8 @@
+<!DOCTYPE HTML>
+	<head>
+		#parse("/WEB-INF/vm/home/head.vm")
+	</head>
+	<body>
+		#parse("/WEB-INF/vm/home/body.vm")
+	</body>
+</html>
