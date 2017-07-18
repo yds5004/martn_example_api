@@ -48,5 +48,6 @@ $ service tomcat8 restart
 [WEB 테스트 하기]
 브라우져에서 아래의 테스트 url을 입력하여 확면을 확인한다.
 test url:
-1) http://localhost:8080/home.ncue?cmd=info&query=test_input
-2) http://localhost:8080/home.ncue?cmd=hello&query=test_input
+    http://localhost:8080/home.ncue?cmd=info&query=test_input
+	http://localhost:8080/home.ncue?cmd=hello&query=test_input
+	http://localhost:8080/home.ncue?cmd=getData&query=test_input
